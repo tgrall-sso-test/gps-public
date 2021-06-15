@@ -1,0 +1,24 @@
+name: Push to OSS
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+
+  push_code:
+    runs-on: ubuntu-latest
+
+    if: ${{ github.repository != 'tgrall-sso-test/gps-public' }}
+    steps:
+
+    - uses: actions/checkout@v2
+      with:
+        token: ${{secrets.OSS_TOKEN}}
+        fetch-depth: 0
+
+    - run: |
+        git remote add oss https://github.com/tgrall-sso-test/gps-public.git
+        echo '.github/workflows/publish-oss.yml' >> .gitignore
+        cat .gitignore
+        git push -f --set-upstream oss main

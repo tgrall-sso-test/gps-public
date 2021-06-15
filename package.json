@@ -1,0 +1,30 @@
+{
+  "name": "gps-tools",
+  "version": "1.0.0",
+  "description": "GPS tool",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tgrall-octodemo/gps-private.git"
+  },
+  "keywords": [
+    "gps",
+    "tools",
+    "node"
+  ],
+  "author": "tug",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/tgrall-octodemo/gps-private/issues"
+  },
+  "homepage": "https://github.com/tgrall-octodemo/gps-private#readme",
+  "dependencies": {
+    "figlet": "^1.5.0"
+  },
+  "devDependencies": {
+    "mocha": "^9.0.0"
+  }
+}
