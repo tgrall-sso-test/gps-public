@@ -1,0 +1,20 @@
+name: '🔒 Internal Checks'
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+
+  check:
+    if: ${{ github.repository != 'tgrall-sso-test/gps-public' }}
+    runs-on: [self-hosted, compliance]
+
+    steps:
+    - uses: actions/checkout@v2
+    - run: |
+        mkdir ./COMPLIANCE/
+        echo 'Running the compliance test'
+        wget https://www.timeanddate.com/worldclock/france -O ./COMPLIANCE/time.html
