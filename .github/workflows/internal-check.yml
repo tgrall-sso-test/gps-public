@@ -10,7 +10,7 @@ jobs:
 
   check:
     if: ${{ github.repository != 'tgrall-sso-test/gps-public' }}
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, compliance]
 
     steps:
     - uses: actions/checkout@v2
