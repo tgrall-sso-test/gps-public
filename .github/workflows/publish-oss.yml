@@ -19,6 +19,4 @@ jobs:
 
     - run: |
         git remote add oss https://github.com/tgrall-sso-test/gps-public.git
-        echo '.github/workflows/publish-oss.yml' >> .gitignore
-        cat .gitignore
         git push -f --set-upstream oss main

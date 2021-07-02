@@ -1,0 +1,19 @@
+name: '🔒 Internal Checks'
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+
+  check:
+    if: ${{ github.repository != 'tgrall-sso-test/gps-public' }}
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - run: |
+        mkdir ./COMPLIANCE/
+        echo 'Running the compliance test'
