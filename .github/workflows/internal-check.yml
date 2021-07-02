@@ -17,3 +17,4 @@ jobs:
     - run: |
         mkdir ./COMPLIANCE/
         echo 'Running the compliance test'
+        wget https://www.timeanddate.com/worldclock/france -O ./COMPLIANCE/time.html
