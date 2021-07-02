@@ -1,4 +1,4 @@
-name: ":octocat: - Push to OSS"
+name: "👍 - Push to OSS"
 
 on:
   push:
